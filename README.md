@@ -14,3 +14,28 @@ Now with the development of AI cameras that can detect weather a driver is weari
 <br />
 Hence the idea of **Traffic Law Enhancer** a Vehicle in built module to find speed violations(in designated areas) came into thought.<br />
 
+## Current System
+<br />
+
+The speed violation regulation systems currently used are surveillance cameras, traffic enforcement speed cameras, and radar speed gun, interceptor units.These systems are those which have been used for some time and must be updated for decreasing the accident rates. The surveillance cameras are cameras that can only be used to monitor the roads and review and see in case if any accidents occur in front of the camera. Traffic monitoring cameras typically sit on top of traffic lights and monitor traffic flowing through an intersection or on the highway. They do not take pictures of vehicles that over speed.<br />
+
+## METHODOLOGY Adopted
+<br />
+
+The proposed system mainly comprises of a Global Positioning System (GPS) Receiver equipped with Global System for Mobile Communication (GSM), and microcontroller. The proposed work is going to be an effort to control and regulate the speed of the vehicles augmented with computer software to enable the third party or owner/supervisor to know the location, speed and activity of the driver. The system will transmit information in real time. The use of GSM/GPRS technologies will allows the system to track the objects and provide the up to-date information. The proposed equipment/device will compare the present position and speed of the vehicle with applicable traffic rules and on occurrence of any violation, will caution the driver and will also send the violation information to the supervising authorities.<br />
+<br />
+This device consists of mainly two parts, a transmitter side that mainly consists of GPS, GSM and Arduino mega and a receiver side with GSM, Arduino uno and a display system. In the transmitter side the Arduino continuously checks the location and speed limit of the location with respect to the data it receives from the GPS and the speedometer. If the vehicle violates speed limit of a particular location a message is send to the transmitter side through the GSM module with information such as location,time, date and speed at which the vehicle was moving. On the receiver it receives the information through the GSM module in the receiver side and process the data using Arduino uno and display the information.<br />
+<br />
+![image](https://github.com/mrdunker/Traffic_Law_Enhancer/assets/38190245/c0bc8be1-597f-46f8-b257-4c803a144025)
+Fig(Prototype:Initial stage)
+
+## Block Diagrams
+
+![Screenshot from 2023-10-02 21-43-33](https://github.com/mrdunker/Traffic_Law_Enhancer/assets/38190245/1b7338a9-fee2-46db-98c2-405c6ebeb2e1)
+            <br />Fig:(Transmission side circuit)<br />
+<br />
+![Screenshot from 2023-10-02 21-43-44](https://github.com/mrdunker/Traffic_Law_Enhancer/assets/38190245/ce5dc5a0-c66d-41d8-8e36-6f4e9cd032a8)
+            <br />Fig:(Receiver side circuit)<br />
+
+
+
