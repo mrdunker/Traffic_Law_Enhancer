@@ -1,0 +1,102 @@
+                                   MEGA INTERFACING
+void setup()
+ {
+  pinMode(13, OUTPUT);
+  Serial.begin(9600);
+ }
+
+void loop() 
+ {
+  digitalWrite(13, HIGH);
+  Serial.println("high");
+  delay(1000); 
+  digitalWrite(13, LOW);  
+  Serial.println("low");
+  delay(1000);             
+ }
+////////////////////////////////////////////////////////////////////////////////////////
+                                  UNO INTERFACING
+void setup()
+ {
+  pinMode(13, OUTPUT);
+  Serial.begin(9600);
+ }
+
+void loop() 
+ {
+  digitalWrite(13, HIGH);
+  Serial.println("high");
+  delay(1000); 
+  digitalWrite(13, LOW);  
+  Serial.println("low");
+  delay(1000);             
+
+ }
+////////////////////////////////////////////////////////////////////////////////////////
+                                  REED SWITCH
+void setup() 
+ {
+  pinMode(13, OUTPUT);
+  pinMode(7,INPUT);
+ }
+void loop() 
+ {
+  
+  if(digitalRead(7)==1)
+   {
+  digitalWrite(13, HIGH);   
+  delay(1000); 
+   }
+  else
+   {
+  digitalWrite(13, LOW);    
+  delay(1000);              
+   }
+}
+////////////////////////////////////////////////////////////////////////////////////////
+                                        GPS
+ #include <TinyGPS.h>
+ TinyGPS gps;  
+
+
+void setup()
+{
+  Serial.begin(9600);  
+  Serial.print("Simple TinyGPS library v. ")());
+  Serial.println("Testing GPS");
+  Serial.println("Designed by: www.TheEngineeringProjects.com");
+  Serial.println();
+}
+
+void loop()
+{
+  bool newData = false;
+  unsigned long chars;
+  unsigned short sentences, failed;
+  for (unsigned long start = millis(); millis() - start < 1000;)
+  {
+    while (Serial.available())
+    {
+      char c = Serial.read();
+      if (gps.encode(c)) 
+        newData = true;  
+    }
+  }
+
+  if (newData)      
+  {
+    float flat, flon;
+    unsigned long age;
+    gps.f_get_position(&flat, &flon, &age);   
+    Serial.print("Latitude = ");
+    Serial.print(flat == TinyGPS::GPS_INVALID_F_ANGLE ? 0.0 : flat, 6);
+    Serial.print(" Longitude = ");
+    Serial.print(flon == TinyGPS::GPS_INVALID_F_ANGLE ? 0.0 : flon, 6);
+
+  }
+ 
+  Serial.println(failed);
+ 
+}
+////////////////////////////////////////////////////////////////////////////////////////
+                                         
