@@ -38,4 +38,100 @@ Fig(Prototype:Initial stage)
             <br />Fig:(Receiver side circuit)<br />
 
 
+## Components Used
+
+### ARDUINO MEGA 2560
+<br />
+The Arduino Mega 2560 is a microcontroller board based on the ATmega2560. It has
+54 digital input/output pins (of which 14 can be used as PWM outputs), 16 analog
+inputs, 4 UARTs (hardware serial ports), a 16 MHz crystal oscillator, a USB
+connection, a power jack, an ICSP header, and a reset button. It contains everything
+needed to support the microcontroller; simply connect it to a computer with a USB
+cable or power it with an AC-to-DC adapter or battery to get started. The Mega 2560 is
+an update to the Arduino Mega.
+<br />
+
+![Screenshot from 2023-10-03 18-06-47](https://github.com/mrdunker/Traffic_Law_Enhancer/assets/38190245/2c6314c6-1606-4e35-86ae-ce1ff751b19c)
+
+
+### ARDUINO UNO
+<br />
+The Arduino UNO is an open-source microcontroller board based on the Microchip
+ATmega328P microcontroller and developed by Arduino.cc. The board is equipped
+with sets of digital and analog input/output (I/O) pins that may be interfaced to various
+expansion boards (shields) and other circuits. The board has 14 Digital pins, 6 Analog
+pins, and programmable with the Arduino IDE (Integrated Development Environment)
+via a type B USB cable. It can be powered by a USB cable or by an external 9 volt
+battery, though it accepts voltages between 7 and 20 volts. It is also similar to the
+Arduino Nano and Leonardo. The Uno board is the first in a series of USB Arduino
+boards, and the reference model for the Arduino platform. The ATmega328 on the
+Arduino Uno comes pre-programmed with a bootloader that allows uploading new code
+to it without the use of an external hardware programmer. It communicates using the
+original STK500 protocol.<br />
+
+![Screenshot from 2023-10-03 18-06-47](https://github.com/mrdunker/Traffic_Law_Enhancer/assets/38190245/8ebf5171-4a54-41a8-b3ee-273a4cf55f6f)
+
+### SIM 900A GSM Module
+<br />
+This is an ultra-compact and reliable wireless module. The SIM900A is a complete
+Dual-band GSM/GPRS solution in a SMT module which can be embedded in the
+customer applications allowing you to benefit from small dimensions and cost-effective
+solutions. Featuring an industry-standard interface, the SIM900A delivers GSM/GPRS
+900/1800MHz performance for voice, SMS, Data, and Fax in a small form factor and
+with low power consumption. With a tiny configuration of 24mm x 24mm x 3 mm,
+SIM900A can fit almost all the space requirements in your applications, especially for
+slim and compact demand of design.<br />
+
+![Screenshot from 2023-10-03 18-09-24](https://github.com/mrdunker/Traffic_Law_Enhancer/assets/38190245/65340ef2-74c2-442e-a18d-965d7e546887)
+
+
+![Screenshot from 2023-10-03 18-09-53](https://github.com/mrdunker/Traffic_Law_Enhancer/assets/38190245/dd5997a4-b466-4953-8030-bbc5ffefb1d7)
+
+
+### NEO 6M GPS Module
+<br />
+The NEO-6 module series is a family of stand-alone GPS receivers featuring the high
+performance u-blox 6 positioning engine. These flexible and cost effective receivers
+offer numerous connectivity options in a miniature 16 x 12.2 x 2.4 mm package. Their
+compact architecture and power and memory options make NEO-6 modules ideal for
+battery operated mobile devices with very strict cost and space constraints.<br />
+
+![Screenshot from 2023-10-03 18-10-44](https://github.com/mrdunker/Traffic_Law_Enhancer/assets/38190245/752993f4-586c-4b4b-b6f4-692cce340592)
+
+
+## Logic Working
+
+### FlowChart
+<br />
+**Transmission side**
+<br />
+
+![Screenshot from 2023-10-03 18-12-23](https://github.com/mrdunker/Traffic_Law_Enhancer/assets/38190245/6fdd4874-d8fe-4236-9746-fce663760549)
+<br />
+
+![Screenshot from 2023-10-03 18-12-34](https://github.com/mrdunker/Traffic_Law_Enhancer/assets/38190245/61b70a99-5034-4158-92a7-f0eee9ad7dd0)
+<br />
+<br />
+**Receiver side**
+<br />
+
+![Screenshot from 2023-10-03 18-13-56](https://github.com/mrdunker/Traffic_Law_Enhancer/assets/38190245/63d54a06-e486-403c-ba8b-b865e502657d)
+<br />
+
+### Logic:
+<br />
+At transmitter part the process begins with the initialization of the input output
+ports, GSM module, GPS module. The real time speed of the moving vehicle is tracked
+continuously. A predefined minimum speed value and maximum speed value is
+determined. If the speed of the vehicle is less than that of the predefined minimum
+value, then no need of checking violation. If the speed of vehicle is greater than the
+predefined maximum value it results to violation and send message to the receiver
+server irrespective of the location. If the speed of the vehicle is in between the data is
+always compared with the database data by fetching it. If the over speeding occurs the
+violation message is send to the receiver server. The process continues occur as a loop
+function.<br />
+The receiver consists only a core processor and a GSM module, so here the
+process is much simpler. The process begins with initialization of input output ports
+and GSM module. The message received from the transmitter is received if a violation
+occurs.<br />
 
