@@ -31,11 +31,12 @@ Fig(Prototype:Initial stage)
 
 ## Block Diagrams
 
-![Screenshot from 2023-10-02 21-43-33](https://github.com/mrdunker/Traffic_Law_Enhancer/assets/38190245/1b7338a9-fee2-46db-98c2-405c6ebeb2e1)
+![Screenshot from 2023-10-02 21-43-33](https://github.com/mrdunker/Traffic_Law_Enhancer/assets/38190245/f2c55b19-e8ab-4719-b2af-e1d8d6bb6ce4)
             <br />Fig:(Transmission side circuit)<br />
 <br />
-![Screenshot from 2023-10-02 21-43-44](https://github.com/mrdunker/Traffic_Law_Enhancer/assets/38190245/ce5dc5a0-c66d-41d8-8e36-6f4e9cd032a8)
-            <br />Fig:(Receiver side circuit)<br />
+
+![Screenshot from 2023-10-02 21-43-44](https://github.com/mrdunker/Traffic_Law_Enhancer/assets/38190245/2f8aa77d-4d56-4c02-bf11-4d24d5907717)
+               <br />Fig:(Receiver side circuit)<br />
 
 
 ## Components Used
@@ -51,7 +52,7 @@ cable or power it with an AC-to-DC adapter or battery to get started. The Mega 2
 an update to the Arduino Mega.
 <br />
 
-![Screenshot from 2023-10-03 18-06-47](https://github.com/mrdunker/Traffic_Law_Enhancer/assets/38190245/2c6314c6-1606-4e35-86ae-ce1ff751b19c)
+![Screenshot from 2023-10-03 18-06-47](https://github.com/mrdunker/Traffic_Law_Enhancer/assets/38190245/383d038f-2e25-43a6-a9a2-9e27d64896d7)
 
 
 ### ARDUINO UNO
@@ -69,7 +70,8 @@ Arduino Uno comes pre-programmed with a bootloader that allows uploading new cod
 to it without the use of an external hardware programmer. It communicates using the
 original STK500 protocol.<br />
 
-![Screenshot from 2023-10-03 18-06-47](https://github.com/mrdunker/Traffic_Law_Enhancer/assets/38190245/8ebf5171-4a54-41a8-b3ee-273a4cf55f6f)
+![Screenshot from 2023-10-03 18-08-03](https://github.com/mrdunker/Traffic_Law_Enhancer/assets/38190245/eb5ab879-3615-4b81-aa90-70a673eb727f)
+
 
 ### SIM 900A GSM Module
 <br />
@@ -82,10 +84,9 @@ with low power consumption. With a tiny configuration of 24mm x 24mm x 3 mm,
 SIM900A can fit almost all the space requirements in your applications, especially for
 slim and compact demand of design.<br />
 
-![Screenshot from 2023-10-03 18-09-24](https://github.com/mrdunker/Traffic_Law_Enhancer/assets/38190245/65340ef2-74c2-442e-a18d-965d7e546887)
+![Screenshot from 2023-10-03 18-09-24](https://github.com/mrdunker/Traffic_Law_Enhancer/assets/38190245/fe06a8ba-93d4-4c23-a00d-9ea4d9e6a453)
 
-
-![Screenshot from 2023-10-03 18-09-53](https://github.com/mrdunker/Traffic_Law_Enhancer/assets/38190245/dd5997a4-b466-4953-8030-bbc5ffefb1d7)
+![Screenshot from 2023-10-03 18-09-53](https://github.com/mrdunker/Traffic_Law_Enhancer/assets/38190245/a57b2cc5-7a1d-488e-838f-7780cc006c3b)
 
 
 ### NEO 6M GPS Module
@@ -96,26 +97,27 @@ offer numerous connectivity options in a miniature 16 x 12.2 x 2.4 mm package. T
 compact architecture and power and memory options make NEO-6 modules ideal for
 battery operated mobile devices with very strict cost and space constraints.<br />
 
-![Screenshot from 2023-10-03 18-10-44](https://github.com/mrdunker/Traffic_Law_Enhancer/assets/38190245/752993f4-586c-4b4b-b6f4-692cce340592)
+![Screenshot from 2023-10-03 18-10-44](https://github.com/mrdunker/Traffic_Law_Enhancer/assets/38190245/dccdbc14-c784-4135-8286-7d1963656a3d)
 
 
 ## Logic Working
 
 ### FlowChart
-<br />
-**Transmission side**
+
+**Transmission side:**
+
 <br />
 
-![Screenshot from 2023-10-03 18-12-23](https://github.com/mrdunker/Traffic_Law_Enhancer/assets/38190245/6fdd4874-d8fe-4236-9746-fce663760549)
+![Screenshot from 2023-10-03 18-12-23](https://github.com/mrdunker/Traffic_Law_Enhancer/assets/38190245/f2783cdd-b220-45ea-9ea1-613c3cc407a8)
+<br />
+![Screenshot from 2023-10-03 18-12-34](https://github.com/mrdunker/Traffic_Law_Enhancer/assets/38190245/eb82f12b-175e-45a6-b1d4-43212faed84b)
+<br />
+<br />
+**Receiver side:**
 <br />
 
-![Screenshot from 2023-10-03 18-12-34](https://github.com/mrdunker/Traffic_Law_Enhancer/assets/38190245/61b70a99-5034-4158-92a7-f0eee9ad7dd0)
-<br />
-<br />
-**Receiver side**
-<br />
+![Screenshot from 2023-10-03 18-13-56](https://github.com/mrdunker/Traffic_Law_Enhancer/assets/38190245/9a608f98-dc12-4862-85cb-0ca9f18829aa)
 
-![Screenshot from 2023-10-03 18-13-56](https://github.com/mrdunker/Traffic_Law_Enhancer/assets/38190245/63d54a06-e486-403c-ba8b-b865e502657d)
 <br />
 
 ### Logic:
